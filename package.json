@@ -2,16 +2,15 @@
   "name": "smartcontract-gpt",
   "version": "1.0.0",
   "type": "module",
-  "description": "",
-  "main": "server.mjs",  // Point to your entry file (server.mjs)
+  "description": "Smart Contract GPT project",
+  "main": "server.mjs",
   "scripts": {
-    "start": "node server.mjs",  // Add start script for deployment
-    "build": "npm install",  // Optional, but good practice
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm install",
+    "start": "node server.mjs"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^6.0.0",
     "hardhat": "^2.25.0"
