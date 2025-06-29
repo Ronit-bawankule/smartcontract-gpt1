@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartContractGPT</title>
+  <link rel="icon" href="data:image/x-icon;base64," />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    /* Light Mode Styles */
+    :root {
+      --text-color-light: #333;  /* Light mode text color */
+      --text-color-dark: #fff;   /* Dark mode text color */
+      --background-light: #f4f4f9;  /* Light mode background */
+      --background-dark: #1b2127;   /* Dark mode background */
+      --logo-light-color: #007bff;  /* Light mode logo text color */
+    }
+
+    body {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Light mode styles */
+    body.light-mode {
+      background-color: var(--background-light);
+      color: var(--text-color-light);
+    }
+
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: var(--background-dark);
+      color: var(--text-color-dark);
+    }
+
+    /* Logo text color for light mode */
+    .light-mode #logoText {
+      color: var(--logo-light-color); /* Blue text color in light mode */
+    }
+
+    /* Improved styling for log list */
+    #logList li {
+      background-color: #1b2127; /* Dark background for logs */
+      padding: 20px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Hover effect for better UI */
+    #logList li:hover {
+      background-color: #283039;
+    }
+
+    /* Adding margins and spacing */
+    #logList li strong {
+      font-weight: bold;
+    }
+
+    #logList li small {
+      color: #888;
+      font-size: 0.8rem;
+      margin-top: 10px;
+      display: block;
+    }
+  </style>
+</head>
+<body class="dark:bg-[#1b2127] dark:text-white transition-all duration-500">
+  <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+    <div class="layout-container flex flex-col flex-grow">
+      <!-- Header -->
+      <header class="flex items-center justify-between border-b border-[#283039] px-10 py-3">
+        <div class="flex items-center gap-4">
+          <!-- SmartContractGPT Logo (SVG) -->
+          <svg id="logo" class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+            <path d="M13.826 30.573c3.149-1.147 6.653-1.551 10.447-1.551s7.298.404 10.447 1.551c2.74.654 5.822 2.193 7.181 3.262L24.849 7.361c-.391-.627-1.306-.627-1.697 0L6.644 33.835c1.36-1.069 4.443-2.608 7.183-3.262z" fill="currentColor"></path>
+          </svg>
+          <!-- SmartContractGPT Text -->
+          <h2 class="text-white text-lg font-bold" id="logoText">SmartContractGPT</h2>
+        </div>
+        <!-- Light/Dark Mode Toggle -->
+        <button id="themeToggle" class="text-white bg-[#283039] px-4 py-2 rounded-full">
+          🌙 Dark Mode
+        </button>
+      </header>
+
+      <!-- Main Content -->
+      <div class="flex flex-1 justify-center py-10 px-40">
+        <div class="flex flex-col max-w-3xl space-y-6">
+          <!-- Blockchain Log Section -->
+          <section class="space-y-10">
+            <h1 class="text-4xl font-bold">Log Your Blockchain Events</h1>
+            <p class="text-base">Enter a blockchain-style message to log an event and get AI explanations in real-time.</p>
+            <div class="bg-[#1b2127] p-6 rounded-lg shadow-lg text-white">
+              <input
+                type="text"
+                id="messageInput"
+                class="w-full p-4 text-black rounded-lg mb-4"
+                placeholder="Enter a blockchain-style message"
+              />
+              <button
+                id="submitBtn"
+                class="w-full h-12 px-6 bg-[#0c7ff2] text-white rounded-lg font-semibold"
+                onclick="sendLog()"
+              >
+                Submit Log
+              </button>
+              <p id="logStatus" class="text-[#9cabba] mt-3 text-sm">Awaiting message submission...</p>
+            </div>
+          </section>
+
+          <!-- AI Explanation Section -->
+          <section class="space-y-10">
+            <h1 class="text-4xl font-bold">AI Log Explanations</h1>
+            <p class="text-base">Here are the AI-generated explanations for your blockchain events:</p>
+            <ul id="logList" class="space-y-4">
+              <!-- Logs will appear here after submission -->
+            </ul>
+          </section>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="text-center py-10">
+        <div class="flex justify-center space-x-8">
+          <a href="#" class="text-[#9cabba]">About Us</a>
+          <a href="#" class="text-[#9cabba]">API Docs</a>
+          <a href="#" class="text-[#9cabba]">Contact</a>
+          <a href="#" class="text-[#9cabba]">Privacy Policy</a>
+        </div>
+        <div class="mt-6 space-x-6">
+          <a href="#" class="text-[#9cabba]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor">
+              <path d="M..."></path>
+            </svg>
+          </a>
+          <a href="#" class="text-[#9cabba]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor">
+              <path d="M..."></path>
+            </svg>
+          </a>
+          <a href="#" class="text-[#9cabba]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor">
+              <path d="M..."></path>
+            </svg>
+          </a>
+        </div>
+        <p class="text-[#9cabba] mt-6">© 2025 SmartContractGPT. All rights reserved.</p>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    // Function to toggle between dark and light mode
+    document.getElementById('themeToggle').addEventListener('click', function() {
+      document.body.classList.toggle('dark'); // This switches dark mode
+      document.body.classList.toggle('light-mode'); // This switches light mode
+  
+      const isDark = document.body.classList.contains('dark');
+      document.getElementById('themeToggle').textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+    });
+
+    // Function to simulate logging and AI explanation
+    async function sendLog() {
+      const msg = document.getElementById('messageInput').value;
+      const status = document.getElementById('logStatus');
+
+      if (!msg) return alert("Please enter a message.");
+
+      try {
+        status.innerText = "Sending to blockchain...";
+
+        // Simulating AI response
+        const aiResponse = generateAIExplanation(msg); // Simulated AI response
+
+        // Current timestamp
+        const timestamp = new Date().toLocaleString();  
+
+        // Adding the log and AI response to the log list (insert at the top)
+        const logList = document.getElementById('logList');
+        logList.innerHTML = `
+          <li class="bg-[#1b2127] p-4 rounded-lg shadow-md text-white">
+            <strong>📩 Message:</strong> ${msg}<br/>
+            <strong>🔮 AI Explanation:</strong> ${aiResponse}<br/>
+            <small>🕒 ${timestamp}</small>
+          </li>
+        ` + logList.innerHTML; // Insert at the top
+
+        // Clear the message input after submitting
+        document.getElementById('messageInput').value = '';
+        status.innerText = "Message logged successfully!";
+      } catch (err) {
+        status.innerText = "Error: " + err.message;
+      }
+    }
+
+    // Function to simulate AI explanation generation
+    function generateAIExplanation(msg) {
+      if (msg.toLowerCase().includes("approve") && msg.toLowerCase().includes("erc-20")) {
+        return "This log represents a call to the 'approve' function on an ERC-20 token contract. The 'approve' function allows a spender to transfer a specified amount of tokens from the sender's account.";
+      } else if (msg.toLowerCase().includes("mint") && msg.toLowerCase().includes("nft")) {
+        return "This log represents the minting of Non-Fungible Tokens (NFTs) to a specified address. NFTs are unique digital assets created and stored on the blockchain.";
+      } else {
+        return "The log content is a generic message, possibly not related to a recognized transaction or event.";
+      }
+    }
+
+    // Enable log submission by pressing Enter key
+    document.getElementById("messageInput").addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        sendLog();
+      }
+    });
+  </script>
+</body>
+</html>

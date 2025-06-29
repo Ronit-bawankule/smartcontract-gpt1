@@ -1,0 +1,117 @@
+await logger.log("✅ Frontend display test from Hardhat!");
+const logger = await Logger.attach("0x5FbDB2315678afecb367f032d93F642f64180aa3");
+const Logger = await ethers.getContractFactory("Logger");
+await logger.log("🚀 Dashboard test after full fix");
+const logger = await Logger.attach("0x5FbDB2315678afecb367f032d93F642f64180aa3");
+const Logger = await ethers.getContractFactory("Logger");
+await logger.log("✅ Final test from full pipeline!");
+const logger = await Logger.attach("0x5FbDB2315678afecb367f032d93F642f64180aa3");
+const Logger = await ethers.getContractFactory("Logger");
+await logger.log("✅ Dashboard pipeline test");
+const logger = await Logger.attach("0x5FbDB2315678afecb367f032d93F642f64180aa3");
+const Logger = await ethers.getContractFactory("Logger");
+await logger.log("📡 Live event test from Hardhat!");
+const logger = await Logger.attach("0x5FbDB2315678afecb367f032d93F642f64180aa3");
+const Logger = await ethers.getContractFactory("Logger");
+await logger.log("📡 Live event test from Hardhat!");
+await logger.log("🚀 Hello from Logger!");
+const logger = await Logger.attach("0x5FbDB2315678afecb367f032d93F642f64180aa3");
+const Logger = await ethers.getContractFactory("Logger");
+const logger = await Logger.attach("0x5FbDB2315678afecb367f032d93F642f64180aa3");
+const Logger = await ethers.getContractFactory("Logger");
+await logger.log("✅ Dashboard pipeline test");
+const logger = await Logger.attach("0x5FbDB2315678afecb367f032d93F642f64180aa3");
+const Logger = await ethers.getContractFactory("Logger");
+await logger.log("✅ Final pipeline test message!");
+const logger = await Logger.attach("0x5FbDB2315678afecb367f032d93F642f64180aa3");
+const Logger = await ethers.getContractFactory("Logger");
+await logger.log("🧪 Full pipeline test message");
+const logger = await Logger.attach("0x5FbDB2315678afecb367f032d93F642f64180aa3")
+const Logger = await ethers.getContractFactory("Logger");
+await logger.log("🔥 This is a fresh test log");
+npx hardhat console --network localhost
+console.log("Logger deployed to:", logger.target);
+await logger.waitForDeployment();
+const logger = await Logger.deploy();
+const Logger = await ethers.getContractFactory("Logger");
+await logger.log("🔥 This is a test log");
+console.log("Deployed at:", logger.target);
+await logger.waitForDeployment();
+const logger = await Logger.deploy();
+const Logger = await ethers.getContractFactory("Logger");
+await logger.log("🔥 This is a test log");
+const logger = await Logger.attach("0xe7f1725e7734ce288f8367e1bb143e90bb3f0512");
+const Logger = await ethers.getContractFactory("Logger");
+await logger.log("🔥 This is a test log");
+npx hardhat console --network localhost
+await logger.log("🔥 This is a test log")
+await logger.log("Testing AI integration: Gemini and OpenAI")
+console.log("Logger deployed to:", logger.target);
+await logger.waitForDeployment();
+const logger = await Logger.deploy();
+const Logger = await ethers.getContractFactory("Logger");
+await logger.log("Final test message!");
+const logger = await Logger.attach("0xe7f1725e7734ce288f8367e1bb143e90bb3f0512");
+const Logger = await ethers.getContractFactory("Logger");
+await logger.log("Hello from working event!");
+const logger = await Logger.attach("0xe7f1725e7734ce288f8367e1bb143e90bb3f0512");
+const Logger = await ethers.getContractFactory("Logger");
+npx hardhat node
+await logger.log("Hello from working event!");
+const logger = await Logger.attach("0xe7f1725e7734ce288f8367e1bb143e90bb3f0512");
+const Logger = await ethers.getContractFactory("Logger");
+await logger.log("Test message for Step 1");
+const logger = await Logger.attach("0xe7f1725e7734ce288f8367e1bb143e90bb3f0512");
+const Logger = await ethers.getContractFactory("Logger");
+await logger.log("Test message for Step 1");
+await logger.log("AI integration test: OpenAI & Gemini!");
+const logger = await Logger.attach("0xe7f1725e7734ce288f8367e1bb143e90bb3f0512");
+const Logger = await ethers.getContractFactory("Logger");
+await logger.log("AI integration test: OpenAI & Gemini!");
+const logger = await Logger.attach("0xe7f1725e7734ce288f8367e1bb143e90bb3f0512");
+const Logger = await ethers.getContractFactory("Logger");
+await logger.log("Test from working stack 🚀");
+await logger.log("It’s finally working!");
+const logger = await Logger.attach("0xe7f1725e7734ce288f8367e1bb143e90bb3f0512");
+const Logger = await ethers.getContractFactory("Logger");
+npx kill-port 8545
+await logger.log("🔁 Final test for event to trigger AI");
+const logger = await Logger.attach("0xe7f1725e7734ce288f8367e1bb143e90bb3f0512");
+const Logger = await ethers.getContractFactory("Logger");
+await logger.log("Hello AI!")
+const logger = await ethers.getContractAt("Logger", "0xe7f1...0512")
+await logger.log("Hello AI!")
+const logger = await ethers.getContractAt("Logger", "0xe7f1...0512")
+> const logger = await ethers.getContractAt("Logger", "0xe7f1...0512")
+await logger.log("🚀 Real-time event for AI analysis")
+await logger.log("SmartContractGPT is now running!");
+const logger = await Logger.attach("0xe7f1725e7734ce288f8367e1bb143e90bb3f0512");
+const Logger = await ethers.getContractFactory("Logger");
+.exit
+await logger.log("Final test message for AI agents.");
+const logger = await Logger.attach("0xe7f1725e7734ce288f8367e1bb143e90bb3f0512");
+const Logger = await ethers.getContractFactory("Logger");
+await logger.log("One more test for AI analysis!");
+await logger.log("Test event for both OpenAI and Gemini");
+const logger = await Logger.attach("0xe7f1725e7734ce288f8367e1bb143e90bb3f0512");
+const Logger = await ethers.getContractFactory("Logger");
+await logger.log("Another test message for Gemini and OpenAI!");
+await logger.log("This is a test event for OpenAI and Gemini!");
+const logger = await Logger.attach("0xe7f1725e7734ce288f8367e1bb143e90bb3f0512");
+const Logger = await ethers.getContractFactory("Logger");
+await logger.log("This is a new blockchain event for AI to analyze!");
+const logger = await Logger.attach("0xe7f1725e7734ce288f8367e1bb143e90bb3f0512");
+const Logger = await ethers.getContractFactory("Logger");
+await logger.log("Another test message for Gemini and OpenAI!");
+const logger = await Logger.attach("0xe7f1725e7734ce288f8367e1bb143e90bb3f0512");
+const Logger = await ethers.getContractFactory("Logger");
+.exit
+npx hardhat console --network localhost
+await logger.log("Another test message for Gemini and OpenAI!");
+const logger = await Logger.attach("0xe7f1725e7734ce288f8367e1bb143e90bb3f0512");
+const Logger = await ethers.getContractFactory("Logger");
+.exit
+npx hardhat node
+await logger.log("User transferred 100 tokens to address 0x123...abc.");
+const logger = await Logger.attach("0xe7f1725e7734ce288f8367e1bb143e90bb3f0512");
+const Logger = await ethers.getContractFactory("Logger");

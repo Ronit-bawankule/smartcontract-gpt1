@@ -1,0 +1,29 @@
+{
+  "name": "smartcontract-gpt",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "server.mjs",  // Point to your entry file (server.mjs)
+  "scripts": {
+    "start": "node server.mjs",  // Add start script for deployment
+    "build": "npm install",  // Optional, but good practice
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^6.0.0",
+    "hardhat": "^2.25.0"
+  },
+  "dependencies": {
+    "@google/genai": "^1.6.0",
+    "@google/generative-ai": "^0.24.1",
+    "axios": "^1.10.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "ethers": "^6.14.4",
+    "express": "^5.1.0",
+    "openai": "^5.7.0"
+  }
+}
